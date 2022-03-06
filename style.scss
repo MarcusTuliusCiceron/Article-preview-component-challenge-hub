@@ -1,0 +1,152 @@
+@import "mixin";
+@import "variables";
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    line-height: 1;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column ;
+    align-content: center ;
+    background-color: $lightGrayishBlue;
+}
+
+.card{
+    background-color: white;
+    width: 730px;
+    height: 280px;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    //overflow: hidden;
+    position: relative;
+    &__image{
+        min-width: 285px;
+        height: 100%;
+        background-image: url(drawers.jpg);
+        background-size: cover;
+    }
+    &__text{
+        padding: 42px;
+        h1{
+            font-size: 20px;
+            line-height: 1.15;
+            color: $veryDarkGrayishBlue;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 15px;
+            color: $desaturatedDarkBlue;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        &__author{
+            display: flex;
+            &__portrait{
+                background-image: url(avatar-michelle.jpg);
+                width: 41px;
+                height: 41px;
+                background-size: cover;
+                border-radius: 50%;
+                margin-right: 17px;
+            }
+            &__info{
+                margin-right: 140px;
+                p{
+                    margin: 0;
+                }
+                .name{
+                    color: $veryDarkGrayishBlue;
+                    font-weight: 700;
+                }
+            }
+            &__share{
+                background-image: url(icon-share.svg);
+                width: 32px;
+                height: 32px;
+                background-repeat: no-repeat;
+                background-color: $lightGrayishBlue;
+                background-position: center;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+    &__sharemenu__dt{
+        display: none;
+        position: absolute;
+        &__pointer{
+            position: relative;
+            width: 17px;
+            height: 17px;
+            transform: rotate(45deg);
+            background-color: $veryDarkGrayishBlue;
+            left: 664px;
+            bottom: -201px;
+        }
+        &__box{
+            position: relative;
+            width: 250px;
+            height: 55px;
+            background-color: $veryDarkGrayishBlue;
+            color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            left: 551px;
+            bottom: -138px;
+            justify-content: space-around;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            p{
+                
+                text-transform: uppercase;
+            }
+            &__fb{
+                height: 20px;
+                width: 20px;
+                background-image: url(icon-facebook.svg);
+                background-size: cover;
+                
+            }
+            &__tw{
+                height: 20px;
+                width: 20px;
+                background-image: url(icon-twitter.svg);
+                background-size: cover;
+                
+            }
+            &__pt{
+                height: 20px;
+                width: 20px;
+                background-image: url(icon-pinterest.svg);
+                background-size: cover;
+            }
+            &.active{
+                display: block;
+            }
+        }
+    }
+    .active{
+        display: block;
+    }
+}

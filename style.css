@@ -1,0 +1,181 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  line-height: 1;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #ecf2f8;
+}
+
+.card {
+  background-color: white;
+  width: 730px;
+  height: 280px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card__image {
+  min-width: 285px;
+  height: 100%;
+  background-image: url(drawers.jpg);
+  background-size: cover;
+}
+
+.card__text {
+  padding: 42px;
+}
+
+.card__text h1 {
+  font-size: 20px;
+  line-height: 1.15;
+  color: #48556a;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.card__text p {
+  font-size: 15px;
+  color: #6d7f97;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.card__text__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__text__author__portrait {
+  background-image: url(avatar-michelle.jpg);
+  width: 41px;
+  height: 41px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.card__text__author__info {
+  margin-right: 140px;
+}
+
+.card__text__author__info p {
+  margin: 0;
+}
+
+.card__text__author__info .name {
+  color: #48556a;
+  font-weight: 700;
+}
+
+.card__text__author__share {
+  background-image: url(icon-share.svg);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-color: #ecf2f8;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.card__text__author__share:hover {
+  cursor: pointer;
+}
+
+.card__sharemenu__dt {
+  display: none;
+  position: absolute;
+}
+
+.card__sharemenu__dt__pointer {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #48556a;
+  left: 664px;
+  bottom: -201px;
+}
+
+.card__sharemenu__dt__box {
+  position: relative;
+  width: 250px;
+  height: 55px;
+  background-color: #48556a;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  left: 551px;
+  bottom: -138px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card__sharemenu__dt__box p {
+  text-transform: uppercase;
+}
+
+.card__sharemenu__dt__box__fb {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-facebook.svg);
+  background-size: cover;
+}
+
+.card__sharemenu__dt__box__tw {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-twitter.svg);
+  background-size: cover;
+}
+
+.card__sharemenu__dt__box__pt {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-pinterest.svg);
+  background-size: cover;
+}
+
+.card__sharemenu__dt__box.active {
+  display: block;
+}
+
+.card .active {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
