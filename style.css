@@ -6,6 +6,7 @@ html {
   line-height: 1;
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
+  overflow-y: hidden;
 }
 
 *, *::before, *::after {
@@ -29,6 +30,14 @@ body {
   background-color: #ecf2f8;
 }
 
+.container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
 .card {
   background-color: white;
   width: 730px;
@@ -38,7 +47,19 @@ body {
   display: -ms-flexbox;
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
   position: relative;
+}
+
+@media (max-width: 49.375em) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 327px;
+    height: 512px;
+  }
 }
 
 .card__image {
@@ -48,8 +69,21 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 49.375em) {
+  .card__image {
+    height: 199px;
+  }
+}
+
 .card__text {
   padding: 42px;
+}
+
+@media (max-width: 49.375em) {
+  .card__text {
+    padding: 30px;
+    padding-top: 40px;
+  }
 }
 
 .card__text h1 {
@@ -60,11 +94,23 @@ body {
   font-weight: 700;
 }
 
+@media (max-width: 49.375em) {
+  .card__text h1 {
+    font-size: 17px;
+  }
+}
+
 .card__text p {
   font-size: 15px;
   color: #6d7f97;
   line-height: 1.2;
   margin-bottom: 20px;
+}
+
+@media (max-width: 49.375em) {
+  .card__text p {
+    margin-bottom: 34px;
+  }
 }
 
 .card__text__author {
@@ -84,6 +130,12 @@ body {
 
 .card__text__author__info {
   margin-right: 140px;
+}
+
+@media (max-width: 49.375em) {
+  .card__text__author__info {
+    margin-right: 45px;
+  }
 }
 
 .card__text__author__info p {
@@ -109,6 +161,33 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 49.375em) {
+  .card__text__author__share {
+    display: none;
+  }
+}
+
+.card__text__author__share__mobile {
+  background-image: url(icon-share.svg);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-color: #ecf2f8;
+  background-position: center;
+  border-radius: 50%;
+  display: none;
+}
+
+.card__text__author__share__mobile:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 49.375em) {
+  .card__text__author__share__mobile {
+    display: block;
+  }
+}
+
 .card__sharemenu__dt {
   display: none;
   position: absolute;
@@ -122,7 +201,7 @@ body {
           transform: rotate(45deg);
   background-color: #48556a;
   left: 664px;
-  bottom: -201px;
+  bottom: -179px;
 }
 
 .card__sharemenu__dt__box {
@@ -139,7 +218,7 @@ body {
           align-items: center;
   border-radius: 15px;
   left: 551px;
-  bottom: -138px;
+  bottom: -115px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-left: 20px;
@@ -168,14 +247,87 @@ body {
   height: 20px;
   width: 20px;
   background-image: url(icon-pinterest.svg);
-  background-size: cover;
 }
 
 .card__sharemenu__dt__box.active {
   display: block;
 }
 
-.card .active {
+.card__sharemenu__mobile {
+  display: none;
+  position: absolute;
+}
+
+.card__sharemenu__mobile__box {
+  position: relative;
+  width: 325px;
+  height: 80px;
+  background-color: #48556a;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -436px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card__sharemenu__mobile__box p {
+  text-transform: uppercase;
+  margin-right: 21px;
+}
+
+.card__sharemenu__mobile__box__fb {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-facebook.svg);
+  background-size: cover;
+  margin-right: 21px;
+}
+
+.card__sharemenu__mobile__box__tw {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-twitter.svg);
+  background-size: cover;
+  margin-right: 21px;
+}
+
+.card__sharemenu__mobile__box__pt {
+  height: 20px;
+  width: 20px;
+  background-image: url(icon-pinterest.svg);
+  background-size: cover;
+  margin-right: 55px;
+}
+
+.card__sharemenu__mobile__box__share {
+  height: 30px;
+  width: 30px;
+  background-image: url(icon-share-copy.svg);
+  background-color: #6d7f97;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.card__sharemenu__mobile__box__share:hover {
+  cursor: pointer;
+}
+
+.card__sharemenu__mobile__box.active {
   display: block;
+}
+
+.active {
+  display: block;
+}
+
+.active_share_button_dt {
+  background-image: url(icon-share-copy.svg);
+  background-color: #48556a;
 }
 /*# sourceMappingURL=style.css.map */
